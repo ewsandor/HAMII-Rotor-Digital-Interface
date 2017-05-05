@@ -12706,14 +12706,17 @@ high speed (Philips)</description>
 <sheet>
 <description>Relays</description>
 <plain>
+<text x="-7.62" y="-48.26" size="1.778" layer="91">Relay symbol is wrong, normally open and normally closed are reverse of symbol</text>
+<text x="-7.62" y="-12.7" size="1.778" layer="91">Relay symbol is wrong, normally open and normally closed are reverse of symbol</text>
+<text x="-7.62" y="22.86" size="1.778" layer="91">Relay symbol is wrong, normally open and normally closed are reverse of symbol</text>
 </plain>
 <instances>
 <instance part="LEFT_RELAY" gate="G$1" x="0" y="35.56"/>
 <instance part="BRAKE_RELAY" gate="G$1" x="0" y="0"/>
 <instance part="RIGHT_RELAY" gate="G$1" x="0" y="-35.56"/>
-<instance part="U$5" gate="G$1" x="22.86" y="33.02"/>
-<instance part="U$6" gate="G$1" x="22.86" y="-2.54"/>
-<instance part="U$7" gate="G$1" x="22.86" y="-38.1"/>
+<instance part="U$5" gate="G$1" x="27.94" y="38.1" rot="MR180"/>
+<instance part="U$6" gate="G$1" x="27.94" y="2.54" rot="MR180"/>
+<instance part="U$7" gate="G$1" x="27.94" y="-33.02" rot="MR180"/>
 <instance part="T1" gate="G$1" x="-22.86" y="25.4"/>
 <instance part="T2" gate="G$1" x="-22.86" y="-10.16"/>
 <instance part="T3" gate="G$1" x="-22.86" y="-45.72"/>
@@ -12798,42 +12801,21 @@ high speed (Philips)</description>
 <segment>
 <pinref part="U$5" gate="G$1" pin="P0"/>
 <pinref part="LEFT_RELAY" gate="G$1" pin="SWCOMMON"/>
-<wire x1="17.78" y1="35.56" x2="7.62" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="LEFT_RELAY" gate="G$1" pin="SWOPEN"/>
-<pinref part="U$5" gate="G$1" pin="P1"/>
-<wire x1="7.62" y1="30.48" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="35.56" x2="7.62" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="BRAKE_RELAY" gate="G$1" pin="SWCOMMON"/>
 <pinref part="U$6" gate="G$1" pin="P0"/>
-<wire x1="7.62" y1="0" x2="17.78" y2="0" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="BRAKE_RELAY" gate="G$1" pin="SWOPEN"/>
-<pinref part="U$6" gate="G$1" pin="P1"/>
-<wire x1="7.62" y1="-5.08" x2="17.78" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="0" x2="22.86" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="RIGHT_RELAY" gate="G$1" pin="SWCOMMON"/>
 <pinref part="U$7" gate="G$1" pin="P0"/>
-<wire x1="7.62" y1="-35.56" x2="17.78" y2="-35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="RIGHT_RELAY" gate="G$1" pin="SWOPEN"/>
-<pinref part="U$7" gate="G$1" pin="P1"/>
-<wire x1="7.62" y1="-40.64" x2="17.78" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-35.56" x2="22.86" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -12888,6 +12870,29 @@ high speed (Philips)</description>
 <wire x1="-12.7" y1="30.48" x2="-20.32" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="30.48" x2="-12.7" y2="33.02" width="0.1524" layer="91"/>
 <junction x="-12.7" y="30.48"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="LEFT_RELAY" gate="G$1" pin="SWCLOSE"/>
+<wire x1="12.7" y1="40.64" x2="10.16" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="P1"/>
+<wire x1="10.16" y1="40.64" x2="7.62" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="40.64" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="BRAKE_RELAY" gate="G$1" pin="SWCLOSE"/>
+<pinref part="U$6" gate="G$1" pin="P1"/>
+<wire x1="22.86" y1="5.08" x2="7.62" y2="5.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="RIGHT_RELAY" gate="G$1" pin="SWCLOSE"/>
+<pinref part="U$7" gate="G$1" pin="P1"/>
+<wire x1="22.86" y1="-30.48" x2="7.62" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
